@@ -1,0 +1,39 @@
+# Entorno virtual
+.venv/
+venv/
+ENV/
+env/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Archivos de entorno
+.env
+.env.*
+
+# Bases de datos locales
+*.sqlite3
+*.db
+
+# Archivos de Docker
+*.pid
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Carpeta de volúmenes de PostgreSQL
+pgdata/
+
+# Carpetas de logs
+logs/
+*.log
+
+# Archivos de PyCharm o VSCode
+.idea/
+.vscode/

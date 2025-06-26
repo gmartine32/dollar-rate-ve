@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: flask-dolar-api
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    networks:
+      - backend
+
+  postgres:
+    image: postgres
+    container_name: olimpo-postgres
+    ports:
+      - "12015:5432"
+    environment:
+      POSTGRES_USER: zeus_adm
+      POSTGRES_PASSWORD: tu_clave
+      POSTGRES_DB: dolar_ve
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - backend
+
+volumes:
+  pgdata:
+
+networks:
+  backend:
